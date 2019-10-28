@@ -51,7 +51,6 @@ namespace BloggingAppAuthenticationAPI.Repository
                 };
                 JwtSecurityToken TokenDescriptor = new JwtSecurityToken(
                     issuer: _config["Jwt:Issuer"],
-                    audience: _config["JWT:Audience"],
                     claims: claims,
                     expires: DateTime.UtcNow.AddDays(1),
                     notBefore: DateTime.UtcNow,
